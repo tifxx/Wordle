@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="title">
+        Wordle
+    </h1>
+    <hr>
+</div>
+<div class="game-container">
+    <div *ngFor="let row of squares" class="rows-container">
+        <div *ngFor="let col of row" class="cols-container" [class.green]="col.class == 'green' "
+            [class.yellow]="col.class == 'yellow' " [class.gray]="col.class == 'gray' ">
+            {{col.key}}
+        </div>
+    </div>
+</div>
+
+<div class="keyboard-container">
+    <button *ngFor="let item of keyboard" (click)="handleClick(item.key)" class="key"
+        [class.green]="item.class == 'green' " [class.yellow]="item.class == 'yellow' "
+        [class.gray]="item.class == 'gray' ">
+        {{item.key}}
+    </button>
+
+</div>
+
+
+<span [class.alertBox]="won == true" class="alert myAlert">
+    You won the game! 🎉
+    <button type="submit" (click)="newGame()" class="btn btn-success newGame">Click here for another game.</button>
+</span>
+
+
+<span [class.alertBox]="done == true" class="alert myAlert">
+    You lost.
+    <br>
+    The target word was {{targetWord}}
+    <button (click)="newGame()" class="btn btn-info newGame">Click here for another game.</button>
+</span>
+
+<span class="alert myAlert" [class.alertBox]="notAWord == true" [class.fade]="notAWord == true">
+    Not a word.
+</span>

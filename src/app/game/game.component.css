@@ -1,0 +1,100 @@
+.title {
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: 1px solid gray;
+
+}
+
+.game-container {
+    margin-bottom: 20px;
+}
+
+.cols-container {
+    text-transform: uppercase;
+    border: 2px solid gray;
+    border-radius: 15%;
+    margin: 1px;
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
+}
+
+.rows-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.keyboard-container {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.key {
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin: 2px;
+
+}
+
+.key:hover {
+    background-color: gainsboro;
+
+}
+
+.green {
+    background-color: #79b851;
+}
+
+.yellow {
+    background-color: #f3c245;
+}
+
+.gray {
+    background-color: #a4aec4e9;
+}
+
+.myAlert {
+    visibility: hidden;
+}
+
+.alertBox {
+    visibility: visible;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 350px;
+    text-align: center;
+    padding: 16px 24px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 5px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.newGame {
+    margin: 10px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 3500ms;
+}
